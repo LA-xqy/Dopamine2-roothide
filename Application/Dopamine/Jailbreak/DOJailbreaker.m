@@ -553,7 +553,8 @@ int ensure_randomized_cdhash(const char* inputPath, void* cdhashOut);
     [[DOUIManager sharedInstance] sendLog:DOLocalizedString(@"Cleaning Up Exploits") debug:NO];
     *errOut = [self cleanUpExploits];
     if (*errOut) return;
-    
+
+    return;
     // We will not be able to reset this after elevating privileges, so do it now
     if (removeJailbreakEnabled) [[DOPreferenceManager sharedManager] setPreferenceValue:@NO forKey:@"removeJailbreakEnabled"];
 
